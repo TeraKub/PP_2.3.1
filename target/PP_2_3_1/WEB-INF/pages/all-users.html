@@ -14,6 +14,7 @@
         <th>Name</th>
         <th>Surname</th>
         <th>Age</th>
+        <th>Instrument</th>
         <th>Update</th>
         <th>Delete</th>
     </tr>
@@ -23,6 +24,7 @@
         <td th:text="${user.getName()}"></td>
         <td th:text="${user.getSurname()}"></td>
         <td th:text="${user.getAge()}"></td>
+        <td th:text="${user.getInstrument()}"></td>
         <td>
             <form th:method="GET" th:action="@{/{id}/edit(id=${user.getId()})}" th:object="${user}">
                 <input type="submit" value="UPDATE"/>

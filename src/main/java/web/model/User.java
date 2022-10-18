@@ -19,13 +19,17 @@ public class User {
     @Column(name = "age")
     private int age;
 
+    @Column(name = "instrument")
+    private String instrument;
+
     public User() {
     }
 
-    public User(String name, String surname, int age) {
+    public User(String name, String surname, int age, String instrument) {
         this.name = name;
         this.surname = surname;
         this.age = age;
+        this.instrument = instrument;
     }
 
     public int getId() {
@@ -58,5 +62,13 @@ public class User {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getInstrument() {
+        return instrument;
+    }
+
+    public void setInstrument(String instrument) {
+        this.instrument = instrument;
     }
 }
